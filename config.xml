@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<widget id="com.ionicframework.protokit195570" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>protokit</name>
+  <description>
+  	Protorype kit for mobile apps
+    </description>
+  <author email="alessio.d@gmail.com" href="http://ionicframework.com/">
+      Alessio Delmonti
+    </author>
+  <content src="index.html"/>
+  <access origin="*"/>
+  <preference name="SplashScreen" value="screen"/>
+  <preference name="SplashScreenDelay" value="3000"/>
+  <preference name="webviewbounce" value="false"/>
+  <preference name="UIWebViewBounce" value="false"/>
+  <preference name="DisallowOverscroll" value="true"/>
+  <preference name="BackupWebStorage" value="none"/>
+  <feature name="StatusBar">
+    <param name="ios-package" value="CDVStatusBar" onload="true"/>
+  </feature>
+  <feature name="InAppBrowser">
+    <param name="ios-package" value="CDVInAppBrowser" />
+    <param name="android-package" value="org.apache.cordova.InAppBrowser" />
+  </feature>
+</widget>

@@ -1,0 +1,14 @@
+{
+  "name": "auth0-angular",
+  "main": "build/auth0-angular.js",
+  "dependencies": {
+    "angular": "*",
+    "auth0.js": "~4.2",
+    "auth0-widget.js": ">= 5.2.11"
+  },
+  "devDependencies": {
+    "angular-cookies": "*",
+    "angular-mocks": "~1.2.16",
+    "angular-route": "~1.2.16"
+  }
+}

@@ -1,0 +1,58 @@
+<ion-side-menus>
+
+  <ion-pane ion-side-menu-content>
+    <ion-nav-bar class="bar-positive nav-title-slide-ios7">
+      <ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> Back</ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+  </ion-pane>
+
+  <ion-side-menu expose-aside-when="large" side="left">
+    <header class="bar bar-header bar-">
+      <h1 class="title">
+      	<i class="icon ion-ionic"></i>
+	Protokit
+      </h1>
+    </header>
+    <ion-content class="has-header">
+      <ion-list>
+        <ion-item nav-clear menu-close ng-click="customlogin()">
+		<i class="icon ion-log-in"></i>
+          Custom Login
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/z">
+	  <i class="icon ion-code-working"></i>
+          Features
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/ui">
+	  <i class="icon ion-cube"></i>
+          UI components
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/map">
+	  <i class="icon ion-map"></i>
+          Maps
+        </ion-item>
+	<ion-item nav-clear menu-close href="#/app/api">
+	  <i class="icon ion-cloud"></i>
+	  Api Example
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/reserved">
+	  <i class="icon ion-social-facebook"></i>
+	  Social login
+        </ion-item>
+	<ion-item nav-clear menu-close href="#/app/ui_settings">
+		<i class="icon ion-levels"></i>
+		Settings
+	</ion-item>
+	<ion-item nav-clear menu-close ng-click="logout()">
+		<i class="icon ion-log-out"></i>
+          Logout 
+        </ion-item>
+	<ion-item nav-clear menu-close href="#/app/author">
+	  <i class="icon ion-android-developer"></i>
+	  Author
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

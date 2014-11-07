@@ -1,0 +1,14 @@
+<ion-view title="Map">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header" ng-controller="MapCtrl">
+	<map center="43.07493,-89.381388" zoom="15"> 
+          <!-- ngRepeat: pos in positions -->
+          <marker ng-repeat=" pos in positions" position="{{pos.lat}},{{pos.lng}}"></marker>
+        </map> 
+  </ion-content>
+  <ion-footer-bar class="bar-dark">
+      <a ng-click="centerOnMe()" class="button button-icon icon ion-navigate">Find Me</a>
+  </ion-footer-bar>
+</ion-view>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app
+        xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+        version="2.5">
+    <display-name>API Authentication Example</display-name>
+
+    <!-- Filters -->
+    <filter>
+        <filter-name>JWTFilter</filter-name>
+        <filter-class>com.auth0.example.JWTFilter</filter-class>
+        <!-- JWT Configuration -->
+        <!-- For your application this can be found on your Auth0 Application Settings -->
+        <init-param>
+            <param-name>jwt.secret</param-name>
+            <param-value>A92LWsdBgH6legaUm8U3uyJ7n1bdEik7WvO8nQab9LlHTtnawpRx8d-HPqW0b2g-</param-value>
+        </init-param>
+
+        <init-param>
+            <param-name>jwt.audience</param-name>
+            <param-value>DyG9nCwIEofSy66QM3oo5xU6NFs3TmvT</param-value>
+        </init-param>
+    </filter>
+
+    <!-- We are going to restrict /api/* paths -->
+    <filter-mapping>
+        <filter-name>JWTFilter</filter-name>
+        <url-pattern>/api/*</url-pattern>
+    </filter-mapping>
+
+    <!-- Servlets -->
+    <servlet>
+        <servlet-name>Restricted</servlet-name>
+        <servlet-class>com.auth0.example.RestrictedServlet</servlet-class>
+    </servlet>
+
+    <!-- Servlet Mappings -->
+    <servlet-mapping>
+        <servlet-name>Restricted</servlet-name>
+        <url-pattern>/api/protected</url-pattern>
+    </servlet-mapping>
+
+</web-app>

@@ -1,0 +1,91 @@
+<ion-view title="Settings">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+	<div class="list">
+		<div class="item item-divider">
+			Account
+		</div>
+	
+		<label class="item item-input item-stacked-label">
+			<span class="input-label">First Name</span>
+			<input type="text" placeholder="John">
+		</label>
+			<label class="item item-input item-stacked-label">
+			<span class="input-label">Last Name</span>
+		<input type="text" placeholder="Suhr">
+		</label>
+			<label class="item item-input item-stacked-label">
+			<span class="input-label">Email</span>
+		<input type="text" placeholder="john@suhr.com">
+		</label>
+		
+		<div class="item item-divider">
+			Notification	
+		</div>
+		
+		<ul class="list">
+			<li class="item item-toggle">
+				Notification	
+				<label class="toggle toggle-balanced">
+					<input type="checkbox">
+					<div class="track">
+						<div class="handle"></div>
+					</div>
+				</label>
+			</li>
+			<li class="item item-toggle">
+				LED enabled	
+				<label class="toggle toggle-energized">
+					<input type="checkbox">
+					<div class="track">
+						<div class="handle"></div>
+					</div>
+				</label>
+			</li>
+		</ul>
+		
+		<div class="item item-divider">
+			Geolocalition
+		</div>
+
+		<ul class="list">
+			<li class="item item-checkbox">
+				<label class="checkbox">
+					<input type="checkbox">
+				</label>
+				Use my position
+			</li>
+			<li class="item item-checkbox">
+				<label class="checkbox">
+					<input type="checkbox">
+				</label>
+				Share my position
+			</li>
+		</ul>
+
+		<div class="list" style="margin-top: 30px">
+			  <div class="item item-divider">
+				Energy
+			  </div>
+			  <div class="item range range-positive">
+			    <i class="icon ion-ios7-sunny-outline"></i>
+			    <input type="range" name="volume" min="0" max="100" value="12">
+			    <i class="icon ion-ios7-sunny"></i>
+			  </div>
+			  <div class="item range range-calm">
+			    <i class="icon ion-ios7-lightbulb-outline"></i>
+			    <input type="range" name="volume" min="0" max="100" value="25">
+			    <i class="icon ion-ios7-lightbulb"></i>
+			  </div>
+			  <div class="item range range-balanced">
+			    <i class="icon ion-ios7-bolt-outline"></i>
+			    <input type="range" name="volume" min="0" max="100" value="38">
+			    <i class="icon ion-ios7-bolt"></i>
+			  </div>
+		</div>
+
+	</div>
+  </ion-content>
+</ion-view>
