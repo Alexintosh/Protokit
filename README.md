@@ -45,4 +45,4 @@ It's only been tested on android
 ```
 
 # Are you Italian?
-**Join** the italian [Ionic Framework community]()!
+**Join** the italian [Ionic Framework community](https://www.facebook.com/groups/380772785422827/)!
