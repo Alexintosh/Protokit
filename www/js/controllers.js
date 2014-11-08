@@ -121,33 +121,35 @@ angular.module('starter.controllers', [])
 
 	$scope.$on('mapInitialized', function(event, map) {
 		$scope.map = map;
+
+		$scope.centerOnMe= function(){
+			$scope.positions = [];
+
+			$ionicLoading.show({
+				content: '<i class="icon ion-loading-c"></i>',
+				animation: 'fade-in',
+				showBackdrop: false,
+				maxWidth: 50,
+				showDelay: 0
+			});
+
+			navigator.geolocation.getCurrentPosition(function(position) {
+				var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+				$scope.positions.push({lat: pos.k,lng: pos.B});
+				var infowindow = new google.maps.InfoWindow({
+					map: $scope.map,
+					position: pos,
+					content: 'Location found using HTML5.'
+				});
+				$scope.map.setCenter(pos);
+				
+				$ionicLoading.hide();
+			});
+
+		};
 	});
 
-	$scope.centerOnMe= function(){
-		$scope.positions = [];
-
-		$ionicLoading.show({
-			content: '<i class="icon ion-loading-c"></i>',
-			animation: 'fade-in',
-			showBackdrop: false,
-			maxWidth: 50,
-			showDelay: 0
-		});
-
-		navigator.geolocation.getCurrentPosition(function(position) {
-			var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-			$scope.positions.push({lat: pos.k,lng: pos.B});
-			var infowindow = new google.maps.InfoWindow({
-				map: $scope.map,
-				position: pos,
-				content: 'Location found using HTML5.'
-			});
-			$scope.map.setCenter(pos);
-			
-			$ionicLoading.hide();
-		});
-
-	};
+	
 
 })
 
