@@ -22,7 +22,7 @@ Assuming your ionic / cordova envirorment is already setted up:
 
 Add platform:
 ```
-ionic platform add android
+cordova platform add android
 ```
 Install plugins:
 ```
