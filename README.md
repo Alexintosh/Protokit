@@ -1,6 +1,5 @@
 # Protokit
 ========
-
 ### A prototype kit for **Ionic Framework**
 
 **Features:**
@@ -21,13 +20,29 @@
 
 Assuming your ionic / cordova envirorment is already setted up:
 
-Install plugins
+Add platform:
 ```
-ionic plugin add org.apache.cordova.splashscreen
-ionic plugin add org.apache.cordova.inappbrowser
+ionic platform add android
+```
+Install plugins:
+```
+cordova plugin add org.apache.cordova.splashscreen
+cordova plugin add org.apache.cordova.inappbrowser
+```
+Install dependencies:
+```
+bower update --force
 ```
 
 Then
 ```
 ionic run
 ```
+
+**Notes**
+```
+It's only been tested on android 
+```
+
+# Are you Italian?
+**Join** the italian [Ionic Framework community]()!
