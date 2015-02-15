@@ -1,4 +1,6 @@
 # Protokit
+[![Coverage Status](https://coveralls.io/repos/Alexintosh/Protokit/badge.svg)](https://coveralls.io/r/Alexintosh/Protokit)
+
 ========
 ### A prototype kit for **Ionic Framework**
 
